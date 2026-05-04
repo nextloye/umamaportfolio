@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Video Editor Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body { margin: 0; }
+
+/* GLITCH TEXT */
+.glitch {
+  position: relative;
+}
+.glitch::before, .glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+.glitch::before {
+  color: red;
+  animation: glitchTop 2s infinite;
+}
+.glitch::after {
+  color: cyan;
+  animation: glitchBottom 2s infinite;
+}
+
+@keyframes glitchTop {
+  0% { clip-path: inset(0 0 80% 0); }
+  100% { clip-path: inset(0 0 10% 0); }
+}
+@keyframes glitchBottom {
+  0% { clip-path: inset(80% 0 0 0); }
+  100% { clip-path: inset(10% 0 0 0); }
+}
+</style>
+
+</head>
+<body class="bg-black text-white font-sans">
+
+<!-- HERO -->
+<section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+
+  <!-- YOUTUBE BACKGROUND -->
+  <iframe
+    id="bgVideo"
+    class="absolute top-1/2 left-1/2 w-[177.77vh] h-[100vh] -translate-x-1/2 -translate-y-1/2 opacity-40 pointer-events-none"
+    frameborder="0"
+    allow="autoplay; fullscreen">
+  </iframe>
+
+  <!-- OVERLAY -->
+  <div class="absolute inset-0 bg-black/70"></div>
+
+  <!-- CONTENT -->
+  <div class="relative z-10 px-4">
+    <h1 class="glitch text-5xl md:text-7xl font-bold mb-4" data-text="VIRAL EDITS">
+      VIRAL EDITS
+    </h1>
+
+    <p class="text-gray-300 max-w-xl mx-auto">
+      High-energy gaming edits, reels & viral content
+    </p>
+
+    <button onclick="unmuteVideo()" class="mt-6 px-6 py-3 bg-orange-500 rounded-2xl hover:scale-110 transition">
+      Enable Sound
+    </button>
+  </div>
+
+</section>
+
+<script>
+// 🔥 PUT YOUR VIDEO IDS HERE
+const playlist = "YJWDatNCoCM,VIDEO2,VIDEO3";
+
+// Load muted playlist
+const iframe = document.getElementById("bgVideo");
+iframe.src = `https://www.youtube.com/embed/YJWDatNCoCM?autoplay=1&mute=1&controls=0&loop=1&playlist=${playlist}&modestbranding=1`;
+
+// Enable sound (user click required)
+function unmuteVideo() {
+  iframe.src = `https://www.youtube.com/embed/YJWDatNCoCM?autoplay=1&mute=0&controls=0&loop=1&playlist=${playlist}&modestbranding=1`;
+}
+</script>
+
+<!-- STATS -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-6 px-8 py-12 text-center">
+  <div><h2 class="text-3xl font-bold">100M+</h2><p class="text-gray-400">Views Generated</p></div>
+  <div><h2 class="text-3xl font-bold">250+</h2><p class="text-gray-400">Projects Done</p></div>
+  <div><h2 class="text-3xl font-bold">98%</h2><p class="text-gray-400">Client Satisfaction</p></div>
+  <div><h2 class="text-3xl font-bold">24h</h2><p class="text-gray-400">Delivery Speed</p></div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="px-8 py-16">
+  <h2 class="text-4xl font-bold mb-8 text-center">My Work</h2>
+
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <div class="bg-gray-900 p-4 rounded-2xl">
+      <iframe class="w-full rounded-xl" height="200"
+        src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+        allowfullscreen></iframe>
+      <p class="mt-3 text-sm text-gray-400">450K views • 72% retention</p>
+    </div>
+
+    <div class="bg-gray-900 p-4 rounded-2xl">
+      <iframe class="w-full rounded-xl" height="200"
+        src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+        allowfullscreen></iframe>
+      <p class="mt-3 text-sm text-gray-400">120K views • Shorts</p>
+    </div>
+
+    <div class="bg-gray-900 p-4 rounded-2xl">
+      <iframe class="w-full rounded-xl" height="200"
+        src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+        allowfullscreen></iframe>
+      <p class="mt-3 text-sm text-gray-400">Gaming Montage</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="px-8 py-20">
+  <h2 class="text-4xl font-bold mb-12 text-center">What Clients Say</h2>
+
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <div class="bg-[#0f0f0f] p-6 rounded-2xl">
+      <p>"My views went from 2K to 180K in 2 weeks."</p>
+    </div>
+
+    <div class="bg-[#0f0f0f] p-6 rounded-2xl">
+      <p>"Retention jumped from 35% to 68%."</p>
+    </div>
+
+    <div class="bg-[#0f0f0f] p-6 rounded-2xl">
+      <p>"Best editor I've worked with."</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- TOS -->
+<section class="px-8 py-20">
+  <h2 class="text-4xl font-bold mb-8 text-center">Terms of Service</h2>
+
+  <div class="max-w-3xl mx-auto text-gray-400 space-y-4 text-sm">
+    <p>Payments upfront or 50/50</p>
+    <p>2–3 revisions included</p>
+    <p>No refunds after work starts</p>
+    <p>Delivery: 24–72h</p>
+  </div>
+</section>
+
+</body>
+</html>
