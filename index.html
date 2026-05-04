@@ -5,192 +5,64 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>YouTube Growth Editor</title>
 <script src="https://cdn.tailwindcss.com"></script>
-
-<style>
-body { margin:0; }
-
-/* hover preview */
-.video-card video { opacity:0; transition:0.3s; }
-.video-card:hover video { opacity:1; }
-.video-card:hover iframe { opacity:0; }
-
-/* sticky button */
-.sticky-contact {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-}
-</style>
 </head>
 
 <body class="bg-black text-white font-sans">
 
-<!-- STICKY CONTACT -->
-<a href="https://discord.com/users/_m44n" target="_blank"
-class="sticky-contact bg-orange-500 px-6 py-3 rounded-full shadow-lg hover:scale-110 transition">
-💬 Message Me
-</a>
+<nav class="p-4 flex gap-6">
+<a href="index.html">Home</a>
+<a href="pricing.html">Pricing</a>
+<a href="reviews.html">Reviews</a>
+<a href="policy.html">Policy</a>
+<a href="contact.html">Contact</a>
+</nav>
 
-<!-- HERO -->
-<section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-
-<iframe id="bgVideo"
-class="absolute top-1/2 left-1/2 w-[177.77vh] h-[100vh] -translate-x-1/2 -translate-y-1/2 opacity-20 pointer-events-none"
-frameborder="0"
-allow="autoplay; encrypted-media"></iframe>
-
-<div class="absolute inset-0 bg-black/70"></div>
-
-<div class="relative z-10 px-4">
-<h1 class="text-5xl md:text-7xl font-bold mb-4">
+<section class="h-screen flex items-center justify-center text-center px-4">
+<div>
+<h1 class="text-5xl font-bold mb-4">
 I Help YouTubers Get More Views & Retention
 </h1>
 
-<p class="text-gray-400 max-w-xl mx-auto text-lg">
-Better hooks, faster pacing, higher watch time
+<p class="text-gray-400 max-w-xl mx-auto">
+Hooks, pacing, and editing strategy that grows channels
 </p>
 
-<div class="mt-6 flex justify-center gap-4 flex-wrap">
-<a href="https://discord.com/users/_m44n" target="_blank"
-class="px-6 py-3 bg-orange-500 rounded-2xl hover:scale-110 transition">
-Hire Me on Discord
-</a>
-
-<a href="#portfolio"
-class="px-6 py-3 border border-gray-600 rounded-2xl hover:scale-110 transition">
-View Work
+<a href="contact.html"
+class="inline-block mt-6 px-8 py-4 bg-orange-500 rounded-2xl">
+Contact Me
 </a>
 </div>
-</div>
 </section>
 
-<script>
-const playlist = "YJWDatNCoCM,VIDEO2,VIDEO3";
-const iframe = document.getElementById("bgVideo");
-
-iframe.src = `https://www.youtube.com/embed/YJWDatNCoCM?autoplay=1&mute=1&controls=0&loop=1&playlist=${playlist}`;
-</script>
-
-<!-- TRUST STRIP -->
-<section class="text-center py-6 text-gray-400">
-Trusted by creators • High retention edits • Fast delivery
-</section>
-
-<!-- PROOF -->
-<section class="grid md:grid-cols-3 gap-6 px-8 py-12 text-center">
-
-<div>
-<h2 class="text-2xl font-bold">+65% Retention Boost</h2>
-<p class="text-gray-400">Avg improvement</p>
-</div>
-
-<div>
-<h2 class="text-2xl font-bold">3s Hook Optimization</h2>
-<p class="text-gray-400">First impression</p>
-</div>
-
-<div>
-<h2 class="text-2xl font-bold">Fast Turnaround</h2>
-<p class="text-gray-400">24–48 hours</p>
-</div>
-
-</section>
-
-<!-- PORTFOLIO -->
-<section id="portfolio" class="px-8 py-16">
-<h2 class="text-4xl font-bold mb-8 text-center">Results</h2>
+<section class="px-8 py-16">
+<h2 class="text-4xl text-center mb-8">My Work</h2>
 
 <div class="grid md:grid-cols-3 gap-6">
 
-<div class="video-card bg-gray-900 p-4 rounded-2xl relative overflow-hidden">
-
-<iframe class="w-full rounded-xl" height="200"
+<div class="bg-gray-900 p-4 rounded-2xl">
+<iframe class="w-full" height="200"
 src="https://www.youtube.com/embed/YJWDatNCoCM"></iframe>
-
-<video muted loop class="absolute top-0 left-0 w-full h-full object-cover rounded-xl">
-<source src="preview1.mp4">
-</video>
-
-<p class="mt-3 text-sm text-gray-400">
-120K views • 68% retention
-</p>
+<p class="text-gray-400 mt-2">120K views • 68% retention</p>
 </div>
 
-<div class="video-card bg-gray-900 p-4 rounded-2xl relative overflow-hidden">
-
-<iframe class="w-full rounded-xl" height="200"
+<div class="bg-gray-900 p-4 rounded-2xl">
+<iframe class="w-full" height="200"
 src="https://www.youtube.com/embed/YOUR_VIDEO_ID"></iframe>
-
-<video muted loop class="absolute top-0 left-0 w-full h-full object-cover rounded-xl">
-<source src="preview2.mp4">
-</video>
-
-<p class="mt-3 text-sm text-gray-400">
-Add real stats
-</p>
+<p class="text-gray-400 mt-2">Add real stats</p>
 </div>
 
-<div class="video-card bg-gray-900 p-4 rounded-2xl relative overflow-hidden">
-
-<iframe class="w-full rounded-xl" height="200"
+<div class="bg-gray-900 p-4 rounded-2xl">
+<iframe class="w-full" height="200"
 src="https://www.youtube.com/embed/YOUR_VIDEO_ID"></iframe>
-
-<video muted loop class="absolute top-0 left-0 w-full h-full object-cover rounded-xl">
-<source src="preview3.mp4">
-</video>
-
-<p class="mt-3 text-sm text-gray-400">
-Add real stats
-</p>
+<p class="text-gray-400 mt-2">Add real stats</p>
 </div>
 
 </div>
 </section>
 
-<script>
-document.querySelectorAll("video").forEach(v => {
-  v.parentElement.addEventListener("mouseenter", () => v.play());
-  v.parentElement.addEventListener("mouseleave", () => v.pause());
-});
-</script>
-
-<!-- TESTIMONIALS -->
-<section class="px-8 py-20">
-<h2 class="text-4xl font-bold mb-12 text-center">Client Results</h2>
-
-<div class="grid md:grid-cols-3 gap-6">
-
-<div class="bg-[#0f0f0f] p-6 rounded-2xl">
-<p>"2K → 180K views in 2 weeks"</p>
-</div>
-
-<div class="bg-[#0f0f0f] p-6 rounded-2xl">
-<p>"Retention doubled"</p>
-</div>
-
-<div class="bg-[#0f0f0f] p-6 rounded-2xl">
-<p>"Insane pacing & edits"</p>
-</div>
-
-</div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="text-center py-20">
-<h2 class="text-5xl font-bold mb-4">
-Want More Views?
-</h2>
-
-<p class="text-gray-400">
-DM me on Discord — I’ll review your video for free
-</p>
-
-<a href="https://discord.com/users/_m44n" target="_blank"
-class="inline-block mt-6 px-8 py-4 bg-orange-500 rounded-2xl hover:scale-110 transition">
-Contact @_m44n
-</a>
-</section>
+<footer class="text-center text-gray-500 py-6 border-t border-gray-800">
+Crafted by <span class="text-white font-semibold">Nextloyed</span>
+</footer>
 
 </body>
 </html>
